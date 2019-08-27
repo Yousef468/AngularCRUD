@@ -1,0 +1,42 @@
+<!-- <h1 *ngIf="dataFromChild">
+  {{dataFromChild?.name}} - {{dataFromChild?.gender}}
+</h1> -->
+
+<!-- (notify)="handleNotify($event)" -->
+<!-- <h1 #h1Element>
+
+</h1> -->
+<!-- (click)="h1Element.innerHTML = childComponenet.getNameAngGender()" -->
+    <!-- <div class="form-group">
+      <button class="btn btn-primary mt-2" (click)="changeTheEmployeeName()">Change the Employee Name</button>
+    </div> -->
+    <div class="form-group mt-2">
+      <input  placeholder="Search a Name" type="text" name="searchTerm" id="searchTerm" [(ngModel)]="searchTerm" class="form-control">
+    </div>
+    <div  *ngFor="let employee of filteredEmployees">        
+          <app-display-employee class="cursorHand" (notifyDelete)="onDeleteNotification($event)" [employee]="employee" [searchTerm]="searchTerm"></app-display-employee>        
+    </div>
+    <div *ngIf="error">
+        {{error}}
+    </div>
+
+
+<!-- 
+<input type="text" [(ngModel)]="userName" name="userName" class="form-control"/>
+
+<app-lifecycle [simpleText]="userName"></app-lifecycle>
+<br>
+<br>
+<button class="btn btn-primary" (click)="nextEmployee()">View Next Employee</button>
+<br>
+<br>
+
+<app-display-employee [employee]="employee" [employeeId]="employee.id"></app-display-employee>
+
+<br>
+<br>
+<div class="row">
+  <ul *ngFor="let employees of newEmployeesArray">
+    <li>{{employees.Code}} - {{employees.name}} - {{employees.gender}} - {{employees.annualSalary}} - {{employees.dateOfBirth}}</li>
+  </ul>
+</div> -->
