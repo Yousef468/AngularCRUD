@@ -1,0 +1,65 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Nick",
+      "gender": "Male",
+      "contactPreference": "Email",
+      "email": "mark@gmail.com",
+      "dateOfBirth": "10/25/1988",
+      "department": "3",
+      "isActive": true,
+      "photoPath": "assets/images/mark.png"
+    },
+    {
+      "id": 2,
+      "name": "Mary",
+      "gender": "Female",
+      "contactPreference": "Phone",
+      "phoneNumber": 23456789,
+      "dateOfBirth": "11/10/1979",
+      "department": "2",
+      "isActive": true,
+      "photoPath": "assets/images/mary.png"
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "gender": "Male",
+      "contactPreference": "Phone",
+      "phoneNumber": 54325878,
+      "dateOfBirth": "11/10/1976",
+      "department": 3,
+      "isActive": false,
+      "photoPath": "assets/images/john.png"
+    },
+    {
+      "id": 5,
+      "name": "Avina1",
+      "gender": "Female",
+      "email": "avina1@gmail.com",
+      "contactPreference": "Email",
+      "dateOfBirth": "2019-08-10",
+      "department": "1",
+      "isActive": true,
+      "phoneNumber": "+9396460774",
+      "photoPath": "assets/images/mark.png",
+      "password": "aaa",
+      "confirmPassword": "aaa"
+    },
+    {
+      "id": 6,
+      "name": "Ariya",
+      "gender": "Male",
+      "email": "aria@yahoo.com",
+      "contactPreference": "Email",
+      "dateOfBirth": "2019-08-11T18:37:36.000Z",
+      "department": "4",
+      "isActive": true,
+      "phoneNumber": "+9171350930",
+      "photoPath": "assets/images/mark.png",
+      "password": "123",
+      "confirmPassword": "123"
+    }
+  ]
+}

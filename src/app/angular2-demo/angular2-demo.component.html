@@ -1,0 +1,82 @@
+
+<table class="table table-bordered  mt-3">
+  <thead>
+    <th colspan="2">Employee Details</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        First Name
+      </td>
+      <td>
+        {{firstName}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Last Name
+      </td>
+      <td>
+        {{lastName}}
+      </td>
+    </tr>
+    <tr *ngIf="showDetails">
+      <td>
+        Age
+      </td>
+      <td>
+        {{age}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-success" (click)="onToggleClick()">
+    {{showDetails ? 'Hide' : 'Show'}} Details
+</button>
+<br>
+<br>
+<!-- <input type="text" [value]='name' (input)='name=$event.target.value'> -->
+<input type="text" class="form-control" [(ngModel)]="name">
+<br>
+You Entered : {{name}}
+
+<br>
+<br>
+<app-employee-counter (countRadioButtonSelectionChanged)="onEmployeeCountRadioButtonChange($event)" [all]="getTotalEmployeeCount()" [male]="getTotalMaleEmployeeCount()" [female]="getTotalFemaleEmployeeCount()"></app-employee-counter>
+<br>
+<br>
+<table class="table table-bordered">
+  <thead>
+    <th>Emp Code</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Salary</th>
+    <th>Date Of Birth</th>
+    <th>Index</th>
+    <th>Is First</th>
+    <th>Is Last</th>
+    <th>Is Even</th>
+    <th>Is Odd</th>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let employee of employees; trackBy:trackByEmpCode; let i = index; let isFirst=first; let isLast=last; let isEven=even; let isOdd=odd">
+    <tr *ngIf="selectedEmployeeCountRadioButton === 'All' || selectedEmployeeCountRadioButton===employee.gender">
+      <td>{{employee.code}}</td>
+      <td>{{employee.name | employeePipe:employee.gender}}</td>
+      <td>{{employee.gender}}</td>
+      <td>{{employee.salary}}</td>
+      <td>{{employee.dateOfBirth}}</td>
+      <td>{{i}}</td>
+      <td>{{isFirst}}</td>
+      <td>{{isLast}}</td>
+      <td>{{isEven}}</td>
+      <td>{{isOdd}}</td>
+    </tr>
+  </ng-container>
+    <tr *ngIf="!employees || employees.length==0">
+      <td colspan="5" class="text-center">No Employee is for desplay!</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <button (click)="getEmployees()" class="btn btn-success">Refresh Ermployees</button> -->
