@@ -60,6 +60,7 @@
       "photoPath": "assets/images/mark.png",
       "password": "123",
       "confirmPassword": "123"
+<<<<<<< HEAD
     },
     {
       "id": 7,
@@ -77,3 +78,8 @@
     }
   ]
 }
+=======
+    }
+  ]
+}
+>>>>>>> master
